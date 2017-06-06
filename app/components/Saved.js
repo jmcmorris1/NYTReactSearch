@@ -1,7 +1,7 @@
 var React = require('react');
 var Router = require('react-router');
 
-var helpers = require('../utils/helpers');
+var helper = require('../utils/helper');
 
 
 var Main = React.createClass({
@@ -12,7 +12,7 @@ var Main = React.createClass({
 	},
 	 componentDidMount: function(){
 
-    helpers.getSaved()
+    helper.getSaved()
       .then(function(articleData){
         this.setState({
           savedArticles: articleData.data
@@ -23,10 +23,10 @@ var Main = React.createClass({
 
   handleClick: function(item, event){
 
-    helpers.deleteSaved(item.title, item.date, item.url)
+    helper.deleteSaved(item.title, item.date, item.url)
       .then(function(data){
 
-      helpers.getSaved()
+      helper.getSaved()
         .then(function(articleData){
           this.setState({
             savedArticles: articleData.data

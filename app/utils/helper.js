@@ -66,4 +66,4 @@ var helpers = {
 
 
 // We export the helpers function 
-module.exports = helpers;
+module.exports = helper;

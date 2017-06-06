@@ -4,7 +4,7 @@ var Router = require('react-router');
 var Query = require('./Search/Query');
 var Results = require('./Search/Results');
 
-var helpers = require('../utils/helpers');
+var helper = require('../utils/helper');
 
 var Search = React.createClass({
 	getInitialState: function(){
